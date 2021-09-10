@@ -1,0 +1,91 @@
+//This file lists all Acceptance criteria for testcases covered in automation suite
+
+-> User story 1 (update-existing-pet.feature)
+     As a tester,
+     I want to check when an user sends request to update an existing pet in store
+     Then correct is response is shown
+
+Acceptance Criteria 1 - Valid request
+Given I want to update record
+When I send valid json request
+Then 200 ok status is received
+And valid Json response is received
+
+Acceptance Criteria 2 - Invalid request sent using invalid ID
+Given I want to update record
+When I send invalid id in json request
+Then 400 status is received
+And appropriate Json response is received
+
+Acceptance Criteria 3 - Search for pet with id that does not exist
+Given I want to update record
+When I send invalid id in json request that does not exist
+Then 404 status is received
+And 'Pet not found' is received
+
+Acceptance Criteria 4 - Invalid method sent
+Given I want to update record
+When I send valid json request with method as GET
+Then 405 status is received
+And appropriate Json response is received
+
+--------------------------------------------------------
+
+-> User story 2 (add-new-pet.feature)
+     As a tester,
+     I want to to add new pet details in store
+     Then correct is response is shown
+
+Acceptance Criteria 5 - Add new pet successful operation
+Given I want to add new pet details
+When I send valid json request with method as POST
+Then 200 status is received
+And appropriate Json response is received
+
+Acceptance Criteria 6 - Add multiple new pets successful operation
+Given I want to add multiple pet details
+When I send valid json request with method as POST
+Then 200 status is received
+And appropriate Json response is received
+
+Acceptance Criteria 7 - Add new pet using invalid methods
+Given I want to add  pet details
+When I send valid json request with invalid methods
+Then 405 status is received
+And appropriate Json response is received
+
+--------------------------------------------------------
+
+-> User story 1 (update-existing-pet.feature)
+     As a tester,
+     I want to find pet details
+     Then correct is response is shown
+
+Acceptance Criteria 8 - Find pet by status
+Given I want to find pet details
+When I search by status and us GET method
+Then appropriate status response is received
+
+Acceptance Criteria 9 - Find pet by tags
+Given I want to find pet details
+When I search by tags and us GET method
+Then appropriate status response is received
+
+Acceptance Criteria 10 - Find pet by Id
+Given I want to find pet details
+When I search by Id and use GET method
+Then appropriate status response is received
+
+--------------------------------------------------------
+
+-> User story 4 (delete-pet.feature)
+     As a tester,
+     I want to delete pet details
+     Then correct is response is shown
+
+Acceptance Criteria 11
+Given I want to delete pet details
+When I search by id and use DELETE method
+Then appropriate Status response is received
+
+--------------------------------------------------------

@@ -1,0 +1,25 @@
+[
+  {
+    "id": 5,
+    "category": {
+      "id": 1,
+      "name": "Dogs"
+    },
+    "name": "Dog 2",
+    "photoUrls": [
+      "url1",
+      "url2"
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "tag2"
+      },
+      {
+        "id": 2,
+        "name": "tag3"
+      }
+    ],
+    "status": "sold"
+  }
+]
